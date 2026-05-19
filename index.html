@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Three Creeks — Acquisition Proposal</title>
+<meta name="description" content="Acquisition proposal for the 119-acre luxury event property at 1019 Hardscrabble Road, Mineral Bluff, Georgia. To be operated as Three Creeks Resort." />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --forest: #2c3e2d;
+    --moss: #5a6b4a;
+    --stone: #8a8780;
+    --cream: #f5f0e6;
+    --ink: #1a1a1a;
+    --paper: #fdfbf6;
+    --gold: #b88a4a;
+    --water: #6a8a99;
+    --shadow: rgba(26, 26, 26, 0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 600; }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 1.2rem; color: var(--forest); }
+  h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); margin-bottom: 0.7rem; color: var(--forest); }
+  p { margin-bottom: 1rem; font-size: 1.025rem; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  a { color: var(--forest); text-decoration: none; border-bottom: 1px solid var(--gold); }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(253, 251, 246, 0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: 1rem 2.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  nav .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--forest);
+    letter-spacing: 0.02em;
+  }
+  nav .brand .accent { color: var(--water); font-style: italic; }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.2rem;
+  }
+  nav ul a {
+    border-bottom: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    transition: color 0.2s;
+  }
+  nav ul a:hover { color: var(--gold); }
+  @media (max-width: 800px) { nav ul { display: none; } }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(26,26,26,0.45), rgba(26,26,26,0.65)), url('hero.jpg') center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+  }
+  .hero .eyebrow { color: var(--cream); }
+  .hero h1 {
+    color: var(--paper);
+    margin-bottom: 0.5rem;
+    max-width: 1000px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .hero h1 .ampersand { font-style: italic; color: rgba(255,255,255,0.7); font-weight: 400; }
+  .hero .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    font-style: italic;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+  }
+  .hero .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    font-weight: 300;
+    max-width: 720px;
+    color: var(--cream);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+  .hero .meta {
+    display: flex; gap: 3rem; flex-wrap: wrap; justify-content: center;
+    font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 1.5rem; margin-top: 1rem;
+    color: var(--cream);
+  }
+  .hero .meta div span { display: block; color: white; font-size: 1.1rem; font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.02em; text-transform: none; }
+
+  /* ===== SECTIONS ===== */
+  section.content {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 7rem 2.5rem;
+  }
+  section.content.narrow { max-width: 880px; }
+  section.dark {
+    background: var(--forest);
+    color: var(--cream);
+  }
+  section.dark h2, section.dark h3 { color: var(--cream); }
+  section.dark .eyebrow { color: var(--gold); }
+  section.dark p { color: rgba(245,240,230,0.92); }
+  section.dark a { color: var(--gold); border-color: var(--gold); }
+
+  section.stone { background: #ebe7df; }
+
+  .lede {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+    line-height: 1.4;
+    color: var(--forest);
+    font-weight: 500;
+    max-width: 800px;
+    margin-bottom: 2.5rem;
+  }
+  section.dark .lede { color: var(--cream); }
+
+  .twocol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  @media (max-width: 800px) { .twocol { grid-template-columns: 1fr; gap: 2.5rem; } }
+  .twocol img { width: 100%; height: auto; border-radius: 4px; box-shadow: 0 20px 60px var(--shadow); }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    margin: 2.5rem 0;
+  }
+  .stat { border-left: 2px solid var(--gold); padding-left: 1.2rem; }
+  .stat .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--forest);
+    margin-bottom: 0.5rem;
+  }
+  section.dark .stat .num { color: var(--cream); }
+  .stat .label {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--stone);
+  }
+  section.dark .stat .label { color: rgba(245,240,230,0.7); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: white;
+    box-shadow: 0 10px 40px var(--shadow);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 0.95rem;
+  }
+  thead { background: var(--forest); color: var(--cream); }
+  th { text-align: left; padding: 1rem 1.2rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; }
+  td { padding: 0.9rem 1.2rem; border-top: 1px solid rgba(0,0,0,0.06); vertical-align: top; }
+  tr.highlight td { background: rgba(184,138,74,0.08); font-weight: 600; }
+  td:first-child { font-weight: 500; }
+  td.num-cell { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; }
+
+  .full-image {
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .full-image .caption {
+    position: absolute;
+    bottom: 2rem;
+    left: 2.5rem;
+    color: white;
+    background: rgba(26,26,26,0.4);
+    backdrop-filter: blur(8px);
+    padding: 0.7rem 1.4rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    border-radius: 2px;
+  }
+
+  .cred-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  .cred {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px var(--shadow);
+    border-top: 3px solid var(--gold);
+  }
+  .cred .label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+  .cred h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+  .cred p { font-size: 0.9rem; margin: 0; color: var(--stone); }
+
+  .timeline { margin: 3rem 0; position: relative; }
+  .timeline::before {
+    content: ''; position: absolute; left: 80px; top: 0; bottom: 0;
+    width: 2px; background: var(--gold);
+  }
+  @media (max-width: 600px) { .timeline::before { left: 30px; } }
+  .step {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 2rem;
+    padding: 1.2rem 0;
+    align-items: start;
+  }
+  @media (max-width: 600px) { .step { grid-template-columns: 60px 1fr; gap: 1rem; } }
+  .step .year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--forest);
+    text-align: right;
+    padding-right: 1.2rem;
+    position: relative;
+  }
+  .step .year::after {
+    content: ''; position: absolute; right: -7px; top: 8px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--gold); border: 3px solid var(--paper);
+  }
+  section.dark .step .year { color: var(--cream); }
+  section.dark .step .year::after { border-color: var(--forest); }
+  .step .detail h3 { font-size: 1.15rem; margin-bottom: 0.3rem; }
+  .step .detail p { font-size: 0.92rem; margin: 0; }
+
+  footer {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+  }
+  footer h2 { color: var(--cream); }
+  footer .signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--gold);
+    margin-top: 2rem;
+  }
+  footer .contact { margin-top: 1.5rem; font-size: 0.95rem; letter-spacing: 0.05em; }
+  footer .small {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 0.78rem;
+    color: rgba(245,240,230,0.5);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  ul.clean { list-style: none; padding: 0; margin: 1.5rem 0; }
+  ul.clean li {
+    padding: 0.7rem 0 0.7rem 2rem;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 0.98rem;
+  }
+  ul.clean li::before {
+    content: '';
+    position: absolute; left: 0; top: 1.15rem;
+    width: 12px; height: 1px;
+    background: var(--gold);
+  }
+  section.dark ul.clean li { border-bottom-color: rgba(255,255,255,0.1); }
+
+  .pull-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-style: italic;
+    text-align: center;
+    color: var(--forest);
+    max-width: 900px;
+    margin: 3rem auto;
+    line-height: 1.4;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  section.dark .pull-quote { color: var(--cream); border-color: rgba(255,255,255,0.15); }
+
+  .water-line {
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: var(--water);
+    margin: 1rem 1rem 1.5rem 0;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">Three <span class="accent">Creeks</span></div>
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#property">Property</a></li>
+    <li><a href="#buyer">Buyer</a></li>
+    <li><a href="#plan">Plan</a></li>
+    <li><a href="#recovery">Recovery</a></li>
+    <li><a href="#close">Close</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="eyebrow">Acquisition Proposal · Mineral Bluff, Georgia</div>
+  <h1>Three Creeks</h1>
+  <div class="tagline">A 119-acre integrated luxury destination resort in the Blue Ridge Mountains.</div>
+  <p class="sub">Three creeks define its boundary. A 2024-built timber-frame event venue anchors it. A planned 50-cabin community completes it. This is the proposal to acquire it.</p>
+  <div class="meta">
+    <div>119 Acres<span>3 Parcels · Blue Ridge, GA</span></div>
+    <div>18,160 SF<span>Event Venue &amp; Outbuildings</span></div>
+    <div>50-Lot Plan<span>Luxury Cabin Community</span></div>
+    <div>35-Day Close<span>No Financing Contingency</span></div>
+  </div>
+</header>
+
+<!-- ===== EXECUTIVE SUMMARY ===== -->
+<section class="content narrow" id="summary">
+  <div class="eyebrow">Executive Summary</div>
+  <h2>$8,250,000 purchase. $2,475,000 cash at close. ~$9.5M total recovery to the Estate over five years.</h2>
+  <p class="lede">John R. Underwood proposes to acquire the Property for <strong>$8,250,000</strong> — $2,475,000 cash at closing plus a $5,775,000 secured first-mortgage note held by the Estate, retired through documented development cash flow over five years.</p>
+
+  <table>
+    <thead>
+      <tr><th>Term</th><th>Detail</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Purchase Price</td><td class="num-cell">$8,250,000</td></tr>
+      <tr><td>Cash at Closing</td><td class="num-cell">$2,475,000 <span style="color:var(--stone);font-size:0.85rem;">(30%)</span></td></tr>
+      <tr><td>Estate Note (1st Mortgage)</td><td class="num-cell">$5,775,000 <span style="color:var(--stone);font-size:0.85rem;">(70%)</span></td></tr>
+      <tr><td>Interest Rate</td><td>5.0% per annum</td></tr>
+      <tr><td>Payment Schedule</td><td>Interest-only quarterly (Years 1–2); amortizing 25-yr schedule (Years 3–5); 5-year balloon</td></tr>
+      <tr><td>Personal Guarantee</td><td>Yes — by Proposed Purchaser</td></tr>
+      <tr><td>Earnest Money</td><td class="num-cell">$300,000 hard</td></tr>
+      <tr><td>Due Diligence</td><td>21 days</td></tr>
+      <tr><td>Closing</td><td>14 days post-DD (35 days total)</td></tr>
+      <tr><td>Financing Contingency</td><td>None</td></tr>
+      <tr class="highlight"><td><strong>Total Nominal Recovery to Estate</strong></td><td class="num-cell"><strong>~$9,500,000</strong></td></tr>
+    </tbody>
+  </table>
+
+  <p>The headline price meets defensible comparable-market evidence. The structure converts a carrying-cost-burdened asset into a secured, income-producing recovery instrument backed by a first-position mortgage and a personal guarantee — and discharged through a documented 50-lot luxury cabin development executed by a principal who has delivered $24 billion in construction value across the most demanding hospitality brands in the country.</p>
+</section>
+
+<!-- ===== FULL IMAGE BREAK ===== -->
+<div class="full-image" style="background-image: linear-gradient(rgba(26,26,26,0.2), rgba(26,26,26,0.5)), url('property-aerial.jpg');">
+  <div class="caption">119 acres · three creeks · a single integrated resort</div>
+</div>
+
+<!-- ===== PROPERTY ===== -->
+<section class="content" id="property">
+  <div class="eyebrow">The Property</div>
+  <h2>A turnkey luxury event venue on 119 acres in the fastest-growing rural-tourism market in the Southeast.</h2>
+
+  <div class="twocol" style="margin-top:3rem;">
+    <div>
+      <h3>Operational Today. Ready Day One.</h3>
+      <p>The Property is a fully constructed, FF&amp;E-equipped, operating event venue in the Blue Ridge / Fannin County market. Built in 2024 to luxury standards, it is ready to host weddings and corporate events on the day of closing — no construction risk, no entitlement risk, no buildout.</p>
+      <ul class="clean">
+        <li><strong>Main Event Venue</strong> — 8,200 SF timber-frame two-level barn with mezzanine, 2,300 SF covered porches, commercial kitchen, bridal suite, full-service bar</li>
+        <li><strong>Activity Barn</strong> — 2,016 SF two-story</li>
+        <li><strong>Bunkhouse</strong> — overnight accommodations</li>
+        <li><strong>Outdoor Pavilion</strong> — 1,200 SF timber frame on stone deck with fireplace &amp; restrooms</li>
+        <li><strong>Maintenance Building</strong> — 8,000 SF metal storage</li>
+        <li><strong>Livestock Barn</strong> — 2,800 SF</li>
+        <li><strong>Wedding Chapel Timber Kit</strong> — in storage, to be erected in Phase I</li>
+        <li><strong>Complete FF&amp;E</strong> for events of 375–400 guests</li>
+        <li><strong>17 Registered Scottish Highland Cattle</strong> — Working herd &amp; brand asset</li>
+        <li><strong>Three-creek boundary</strong> — Natural privacy on three sides</li>
+      </ul>
+    </div>
+    <div>
+      <img src="venue-interior.jpg" alt="Luxury timber-frame wedding venue interior" />
+    </div>
+  </div>
+
+  <div class="stat-grid" style="margin-top:4rem;">
+    <div class="stat"><div class="num">$66.2B</div><div class="label">U.S. Wedding Market (2025)</div></div>
+    <div class="stat"><div class="num">+26.3%</div><div class="label">Fannin County STR Revenue YoY</div></div>
+    <div class="stat"><div class="num">$468</div><div class="label">Avg Nightly Rate, Fannin County</div></div>
+    <div class="stat"><div class="num">17%</div><div class="label">Barn/Ranch — #2 U.S. Venue Type</div></div>
+  </div>
+</section>
+
+<!-- ===== BUYER ===== -->
+<section class="content stone" style="max-width:100%;padding:7rem 2.5rem;" id="buyer">
+  <div style="max-width:1180px; margin:0 auto;">
+    <div class="eyebrow">The Buyer</div>
+    <h2>John R. Underwood — 25 years, $24 billion delivered, zero defaulted projects.</h2>
+
+    <p class="lede">John R. Underwood is a hospitality and mixed-use development principal whose 25-year career spans the most demanding hospitality, food-and-beverage, and entertainment programs in the southeastern United States. Most recently Senior Program Manager at <strong>Jones Lang LaSalle</strong> (2011–2025), the largest commercial real estate services firm in the world.</p>
+
+    <div class="cred-grid">
+      <div class="cred">
+        <div class="label">Hospitality / F&amp;B</div>
+        <h3>Chick-fil-A</h3>
+        <p>230-location national rebuild program. Chargrill kitchen remodel program. Brand-quality F&amp;B execution at national scale.</p>
+      </div>
+      <div class="cred">
+        <div class="label">Hospitality &amp; Entertainment</div>
+        <h3>Atlanta Braves at The Battery</h3>
+        <p>250,000 SF HQ &amp; nine offices at one of the most successful integrated hospitality / sports / F&amp;B / retail destinations in the U.S. Southeast.</p>
+      </div>
+      <div class="cred">
+        <div class="label">Multi-Brand Restaurant</div>
+        <h3>Inspire Brands</h3>
+        <p>Corporate HQ portfolio: Buffalo Wild Wings · Arby's · Sonic · Dunkin'. Direct working relationship with a top-five U.S. restaurant operator.</p>
+      </div>
+      <div class="cred">
+        <div class="label">Multi-Site Rollout</div>
+        <h3>T-Mobile</h3>
+        <p>National 2,700-store relocation program. The exact discipline required to deliver a 50-lot phased cabin community on schedule.</p>
+      </div>
+      <div class="cred">
+        <div class="label">Mixed-Use HQ</div>
+        <h3>Aflac · Newell · Norfolk Southern · Equifax</h3>
+        <p>Multi-million-square-foot Fortune 500 portfolio. Aflac Cancer Center. Norfolk Southern North American HQ. Newell global industrial program.</p>
+      </div>
+      <div class="cred">
+        <div class="label">Credentials</div>
+        <h3>LEED AP · OSHA-30 · BBA</h3>
+        <p>LEED Accredited Professional. OSHA-30 certified. BBA, Jacksonville State University.</p>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat"><div class="num">$24B+</div><div class="label">Aggregate Project Value</div></div>
+      <div class="stat"><div class="num">10M+ SF</div><div class="label">Commercial Build-Out Delivered</div></div>
+      <div class="stat"><div class="num">248</div><div class="label">Interior Projects since 2015</div></div>
+      <div class="stat"><div class="num">100%</div><div class="label">On-Time, On-Budget Delivery</div></div>
+    </div>
+
+    <div class="pull-quote">
+      "Three Creeks is not a passive real-estate purchase. It is a hospitality operating business and a 60-acre development program. Both require execution. That is what I do."
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL IMAGE BREAK ===== -->
+<div class="full-image" style="background-image: linear-gradient(rgba(26,26,26,0.15), rgba(26,26,26,0.4)), url('cabin-community.jpg');">
+  <div class="caption">50-lot luxury cabin community · phased Year 1–5</div>
+</div>
+
+<!-- ===== PLAN ===== -->
+<section class="content dark" style="max-width:100%;padding:7rem 2.5rem;" id="plan">
+  <div style="max-width:1180px; margin:0 auto;">
+    <div class="eyebrow">The Plan</div>
+    <h2>Integrated destination resort. 50-lot cabin community. Five-year build-out, fully funded by the program itself.</h2>
+
+    <p class="lede">The 60-acre developable portion of the Property supports a phased 50-lot luxury cabin community. The community is the development product. The venue is the demand engine. The Highland cattle, chapel, and 119-acre setting are the brand. Together they constitute the first fully-integrated luxury wedding-and-resort destination in the Blue Ridge market.</p>
+
+    <h3 style="margin-top:3rem;">Three Revenue Channels, One Asset</h3>
+    <p>Each cabin generates revenue through all three of the following channels:</p>
+    <ul class="clean">
+      <li><strong>For-Sale Inventory</strong> — 50 cabins sold over 5 years at $725K–$895K, generating gross sales of approximately $40M and funding retirement of the Estate Note</li>
+      <li><strong>Short-Term Rental Inventory</strong> — Cabins held during pre-sale at $58K–$120K/yr per cabin per AirDNA Blue Ridge market data</li>
+      <li><strong>Venue-Tied Full-Resort Weekends</strong> — Wedding weekends at $25K–$45K per event including cabin block buyouts, doubling the venue's per-event revenue</li>
+    </ul>
+
+    <h3 style="margin-top:3rem;">Five-Year Build-Out Tied to Estate Note Repayment</h3>
+    <div class="timeline">
+      <div class="step">
+        <div class="year">Yr 1</div>
+        <div class="detail">
+          <h3>Horizontal Infrastructure &amp; Venue Operations</h3>
+          <p>Roads, utilities, septic. 5 model cabins delivered. Venue operating with brand continuity. Estate Note serviced via interest-only payments from venue revenue.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="year">Yr 2</div>
+        <div class="detail">
+          <h3>Phase I Complete · 15 Cabins · First Closings</h3>
+          <p>Cumulative cabin sales ~$5.8M. Sale proceeds reinvested into Phase II. Interest-only continues. Wedding chapel erected as Phase I deliverable.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="year">Yr 3</div>
+        <div class="detail">
+          <h3>Phase II Underway · Venue Stabilized</h3>
+          <p>Cumulative sales ~$16.5M. Estate Note begins amortizing. Initial principal paydown. Trailing NOI sufficient to support conventional refinance if desired.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="year">Yr 4</div>
+        <div class="detail">
+          <h3>Phase II Complete · Phase III Begins</h3>
+          <p>Cumulative sales ~$28M. Refinance or full retirement of Estate Note from cabin proceeds.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="year">Yr 5</div>
+        <div class="detail">
+          <h3>Phase III Complete · Note Retired</h3>
+          <p>Cumulative sales $36M+. Estate Note retired in full. Three Creeks continues to operate as integrated resort with retained STR cabin inventory.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL IMAGE BREAK ===== -->
+<div class="full-image" style="background-image: linear-gradient(rgba(26,26,26,0.15), rgba(26,26,26,0.4)), url('cattle.jpg');">
+  <div class="caption">17 registered Scottish Highland cattle · agritourism &amp; brand asset</div>
+</div>
+
+<!-- ===== RECOVERY ===== -->
+<section class="content" id="recovery">
+  <div class="eyebrow">Recovery to the Estate</div>
+  <h2>~$9.5M nominal — higher than any realistically available alternative.</h2>
+
+  <p class="lede">On a nominal basis this transaction delivers approximately $9.5 million to the Estate. On a present-value basis it is directly competitive with the speculative best case of continued marketing — and it carries materially higher confidence, a documented repayment plan, and a hard recovery floor.</p>
+
+  <table>
+    <thead>
+      <tr><th>Alternative</th><th>Mid-Point Recovery</th><th>Time to Close</th><th>Confidence</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Continued marketing at $10.5M</td><td class="num-cell">~$8.1M (range $6.9–9.3M)</td><td>6–12+ months</td><td>Low</td></tr>
+      <tr><td>Distressed all-cash sale</td><td class="num-cell">~$5.9M</td><td>30–60 days</td><td>Medium-High</td></tr>
+      <tr class="highlight"><td><strong>Proposed Underwood Transaction</strong></td><td class="num-cell"><strong>~$9.5M</strong></td><td><strong>35 days</strong></td><td><strong>High</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:3rem;">Why the Estate Recovery Floor Beats the Cash Alternative</h3>
+  <p>Even in a default scenario, the Estate's recovery floor under this transaction <strong>exceeds the nominal recovery of any all-cash distressed alternative</strong>, because:</p>
+  <ul class="clean">
+    <li>The Estate holds a first-position mortgage on improved real estate worth materially more than the Note balance throughout the term</li>
+    <li>The Property's collateral value is contractually positioned to grow during the Note term as the cabin community is developed</li>
+    <li>The Estate holds a personal guarantee from a principal with $24B+ in successful project delivery and a clean credit record</li>
+    <li>$1.485M cash plus interim payments are received and irreversible before any default event could materialize</li>
+  </ul>
+
+  <h3 style="margin-top:3rem;">Carrying-Cost Erosion of the Alternatives</h3>
+  <p>Each additional month the Property remains in Estate custody costs <strong>$31,000–$50,000</strong> in documentable carrying costs: commercial insurance, security, livestock husbandry, receiver and counsel fees, property taxes, and utilities. Continued marketing imposes a real, ongoing cost that this transaction terminates within 35 days.</p>
+</section>
+
+<!-- ===== STRUCTURE / CLOSE ===== -->
+<section class="content stone" style="max-width:100%;padding:7rem 2.5rem;" id="close">
+  <div style="max-width:1180px; margin:0 auto;">
+    <div class="eyebrow">Path to Close</div>
+    <h2>35 days. No financing contingency. $300,000 hard earnest. Personal guarantee. Court-supervised overbid procedure.</h2>
+
+    <p class="lede">The path to close is transparent, fast, and structured to give the Court and the Estate maximum confidence. The Proposed Purchaser welcomes a competitive overbid procedure as the appropriate test of whether this transaction represents the best available recovery.</p>
+
+    <table>
+      <thead><tr><th>Day</th><th>Milestone</th></tr></thead>
+      <tbody>
+        <tr><td>Day 0</td><td>Contract execution · $200,000 hard EM</td></tr>
+        <tr><td>Days 1–21</td><td>Due diligence period</td></tr>
+        <tr><td>Day 21</td><td>DD expires · additional $100,000 hard EM</td></tr>
+        <tr><td>Days 22–35</td><td>Closing preparation</td></tr>
+        <tr><td>Day 35</td><td><strong>Closing · $2,475,000 cash to Estate · $5,775,000 Note issued</strong></td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:3rem;">Bid Procedures &amp; Overbid Protection</h3>
+    <p>The Proposed Purchaser supports inclusion in any Court order of standard overbid procedures: stalking-horse designation, 30-day notice period to Estate creditors, minimum overbid increment of $250,000, $300,000 EM requirement for qualifying competing bidders, supervised auction in the event of multiple qualifying bids, and customary stalking-horse protections ($150,000 break-up fee and capped diligence reimbursement) if topped.</p>
+    <p>The Proposed Purchaser welcomes that procedure as the appropriate market test.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER / CTA ===== -->
+<footer>
+  <h2>Three Creeks is ready.</h2>
+  <p style="max-width:680px;margin:1.5rem auto;color:rgba(245,240,230,0.85);">
+    The Proposed Purchaser is positioned to execute a Letter of Intent on these terms upon expression of interest by the Estate or its counsel, and to proceed promptly to contract and court approval.
+  </p>
+  <div class="signature">— John R. Underwood</div>
+
+  <div class="small">
+    Confidential · Acquisition Proposal · May 2026
+  </div>
+</footer>
+
+</body>
+</html>
